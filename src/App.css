@@ -1,13 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 .App {
+  font-family: 'Monoton', cursive;
+
+  color: rgb(69, 175, 19);
   max-width: 860px;
   margin: 1px auto;
 }
 button {
+  font-family: 'Monoton', cursive;
+
+  color: rgb(42, 158, 48);
   background: none;
-  border: 2px solid #fff;
+  border: 2px solid rgb(52, 168, 124);
   padding: 6px 12px;
   border-radius: 4px;
-  color: #fff;
+  color: rgb(175, 42, 42);
   font-weight: bold;
   cursor: pointer;
   font-size: 1em;
@@ -23,6 +30,14 @@ button:hover {
   margin-right:15px ;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap:10px;
+}
+.puan{
+  font-family: 'Monoton', cursive;
+
+  color: rgb(121, 106, 106);
+}
+.turns{
+  color: rgb(202, 39, 162);
 }
 @media (min-width:200px) and (max-width:450px) {
   .card-grid {

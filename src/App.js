@@ -85,7 +85,7 @@ useEffect(()=>{
           />
         ))}
       </div>
-      <p>Turns: {turns}</p>
+      <h3 className='puan'>Puanınız : <span className='turns'>{turns} </span></h3>
     </div>
   );
 }
