@@ -10,9 +10,7 @@ const cardImages =[
   {"src":"./img/shield-1.png" ,matched:false},
   {"src":"./img/sword-1.png" ,matched:false},
   {"src":"./img/kedi.png" ,matched:false},
-  {"src":"./img/arı.png" ,matched:false},
-  {"src":"./img/güvercin.png" ,matched:false},
-  {"src":"./img/penguen.png" ,matched:false},
+  {"src":"./img/arı.png" ,matched:false}
   
 
 ]
@@ -34,7 +32,7 @@ const shuffleCards = ()=>{
   setChoiceOne(null)
   setChoiceTwo(null)
   setCards(shuffledCards)
-  setTurns(0)
+  setTurns(100)
 }
 
 //handle a  Choice
@@ -46,6 +44,7 @@ useEffect(()=>{
     setDisabled(true)
 
     if(choiceOne.src === choiceTwo.src){
+      setTurns(turns+2)
       setCards(prevCards =>{
         return prevCards.map(card =>{
           if(card.src===choiceOne.src){
@@ -62,13 +61,13 @@ useEffect(()=>{
       
     }
   }
-},[choiceOne,choiceTwo])
+},[choiceOne,choiceTwo,turns])
 
 
 const resetTurn = ()=>{
   setChoiceOne(null)
   setChoiceTwo(null)
-  setTurns(prevTurns => prevTurns +1 )
+  setTurns(prevTurns => prevTurns -1 )
   setDisabled(false)
 }
 useEffect(()=>{
@@ -90,5 +89,6 @@ useEffect(()=>{
     </div>
   );
 }
+
 
 export default App
