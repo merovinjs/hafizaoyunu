@@ -1,8 +1,8 @@
 .card{
     position: relative;
     
-    margin-right: 5px;
-    margin-left: 5px;
+    margin-right: 2px;
+    margin-left: 2px;
 }
 .card img {
     width: 100%;

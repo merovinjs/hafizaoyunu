@@ -2,14 +2,18 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import SingleCard from './components/SingleCard'
 
-
 const cardImages =[
   {"src":"./img/helmet-1.png" ,matched:false},
   {"src":"./img/potion-1.png" ,matched:false},
   {"src":"./img/ring-1.png" ,matched:false},
   {"src":"./img/scroll-1.png", matched:false},
   {"src":"./img/shield-1.png" ,matched:false},
-  {"src":"./img/sword-1.png" ,matched:false}
+  {"src":"./img/sword-1.png" ,matched:false},
+  {"src":"./img/kedi.png" ,matched:false},
+  {"src":"./img/arı.png" ,matched:false},
+  {"src":"./img/güvercin.png" ,matched:false},
+  {"src":"./img/penguen.png" ,matched:false},
+  
 
 ]
 
@@ -73,7 +77,7 @@ useEffect(()=>{
 
   return (
     <div className="App">
-      <h1>Hafıza Oyunu</h1>
+      <h2>Hafıza Oyunu</h2>
       <button onClick={shuffleCards}>Yeni Oyun</button>
       <div className="card-grid">
         {cards.map(card=>(
