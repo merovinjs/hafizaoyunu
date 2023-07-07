@@ -14,8 +14,6 @@ const cardImages = [
 ];
 
 function App() {
-  //shuffle cards (karıştır)
-
   const [cards, setCards] = useState([]);
   const [turns, setTurns] = useState(0);
   const [choiceOne, setChoiceOne] = useState(null);
@@ -31,8 +29,6 @@ function App() {
     setCards(shuffledCards);
     setTurns(100);
   };
-
-  //handle a  Choice
   const handleChoice = (card) => {
     choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
   };
