@@ -1,9 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+.Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 .App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   font-family: "Monoton", cursive;
   color: rgb(69, 175, 19);
-  max-width: 860px;
-  margin: 1px auto;
+  max-width: 460px;
+  margin-top: 90px;
+  max-height: 450px;
 }
 button {
   font-family: "Monoton", cursive;

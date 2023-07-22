@@ -9,7 +9,7 @@ const cardImages = [
   { src: "./img/scroll-1.png", matched: false },
   { src: "./img/shield-1.png", matched: false },
   { src: "./img/sword-1.png", matched: false },
-  { src: "./img/kedi.png", matched: false },
+  { src: "./img/kedi.jpg", matched: false },
   { src: "./img/arı.png", matched: false },
 ];
 
@@ -65,23 +65,25 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <h2>Hafıza Oyunu</h2>
-      <button onClick={shuffleCards}>Yeni Oyun</button>
-      <div className="card-grid">
-        {cards.map((card) => (
-          <SingleCard
-            key={card.id}
-            card={card}
-            handleChoice={handleChoice}
-            flipped={card === choiceOne || card === choiceTwo || card.matched}
-            disabled={disabled}
-          />
-        ))}
+    <div className="Container">
+      <div className="App">
+        <h2>Hafıza Oyunu</h2>
+        <button onClick={shuffleCards}>Yeni Oyun</button>
+        <div className="card-grid">
+          {cards.map((card) => (
+            <SingleCard
+              key={card.id}
+              card={card}
+              handleChoice={handleChoice}
+              flipped={card === choiceOne || card === choiceTwo || card.matched}
+              disabled={disabled}
+            />
+          ))}
+        </div>
+        <h3 className="puan">
+          Puanınız : <span className="turns"> {turns} </span>
+        </h3>
       </div>
-      <h3 className="puan">
-        Puanınız : <span className="turns"> {turns} </span>
-      </h3>
     </div>
   );
 }
